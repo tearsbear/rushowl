@@ -3,12 +3,7 @@ const cors = require("cors");
 const app = express();
 const port = 3002; // port for the backend (same as the value of proxy in package.json)
 
-app.use(
-  cors({
-    origin: "http://localhost:3000", //port frontend
-    methods: ["GET", "POST"],
-  })
-);
+app.use(cors());
 app.use(express.json());
 
 // dummy data
