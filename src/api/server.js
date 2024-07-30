@@ -5,7 +5,7 @@ const port = 3002; // port for the backend (same as the value of proxy in packag
 
 app.use(
   cors({
-    origin: "https://rushowl-jiehan.vercel.app/", // Replace with your Vercel app's URL
+    origin: "*", // Allow requests from any origin
     methods: ["GET", "POST"],
   })
 );
