@@ -5,6 +5,7 @@ const port = 3002; // port for the backend (same as the value of proxy in packag
 
 app.use(cors());
 app.use(express.json());
+app.options("/login", cors());
 
 // dummy data
 const users = [{ email: "test1@mail.com", password: "123" }];
