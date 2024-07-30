@@ -15,7 +15,7 @@ app.use(express.json());
 const users = [{ email: "test1@mail.com", password: "123" }];
 
 // Login endpoint
-app.post("/login", (req, res) => {
+app.post("/api/login", (req, res) => {
   const { email, password } = req.body;
 
   // simple auth to find user for dummy data
