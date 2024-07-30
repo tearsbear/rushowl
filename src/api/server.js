@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = 3002; // port for the backend (same as the value of proxy in package.json)
 
 app.use(
   cors({
