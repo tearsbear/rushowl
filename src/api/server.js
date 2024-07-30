@@ -1,20 +1,13 @@
 const express = require("express");
-const cors = require("cors");
 const app = express();
 
-app.use(
-  cors({
-    origin: "*", // Allow requests from any origin
-    methods: ["GET", "POST"],
-  })
-);
 app.use(express.json());
 
 // dummy data
 const users = [{ email: "test1@mail.com", password: "123" }];
 
 // Login endpoint
-app.post("/api/login", (req, res) => {
+app.post("/login", (req, res) => {
   const { email, password } = req.body;
 
   // simple auth to find user for dummy data
