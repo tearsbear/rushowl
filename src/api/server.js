@@ -3,9 +3,13 @@ const cors = require("cors");
 const app = express();
 const port = 3002; // port for the backend (same as the value of proxy in package.json)
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://rushowl-jiehan.vercel.app/", // Replace with your Vercel app's URL
+    methods: ["GET", "POST"],
+  })
+);
 app.use(express.json());
-app.options("/login", cors());
 
 // dummy data
 const users = [{ email: "test1@mail.com", password: "123" }];
